@@ -10,6 +10,7 @@ git config --global user.email "your@email.com"
 ```
 <p>
 更多配置信息
+</p>
 
 ```
 user.name=yourname
@@ -25,7 +26,7 @@ core.quotepath=false
 ```
 
 ## 生成SSH Key
-`ssh-keygen -t rsa:w
+`ssh-keygen -t rsa
 `
 
 ## 常用的Git
@@ -37,6 +38,7 @@ core.quotepath=false
 * git push origin master
 <p>
 以上几点是常用的流程
+</p>
 
 * git checkout .
 * git reset HEAD `file`: 取消跟踪
