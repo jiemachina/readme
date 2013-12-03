@@ -48,4 +48,31 @@ core.quotepath=false
 * git show `hash code`: 查看最后一个commit的代码修改
 * git reflog: 查看最近操作的
 * git stash: 缓存当前编辑
+#### 场景
+* 修改commit信息
+
+```
+    git commit --amend -m "New commit message"
+    
+```
+
+* 修改commit错误，又不想要多个commit
+
+```
+git reset --soft HEAD^
+... do something else to come up with the right tree ...(git add . 或者 git log)
+git commit -c ORIG_HEAD
+
+```
+
+
+
+
+
+
+
+
+
+
+
 
