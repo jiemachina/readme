@@ -1,4 +1,4 @@
-# 问题或目的
+# 目的
 [参考材料](http://git-scm.com/book/zh/)<br>
 搜集自己工作中常用的git命令
 
@@ -13,21 +13,23 @@ git config --global user.email "your@email.com"
 </p>
 
 ```
-user.name=yourname
-user.email=your@email.com
-color.ui=true
-color.status=auto
-color.diff=auto
-color.branch=auto
-color.interactive=auto
-core.editor=mvim
-core.quotepath=false
+
+user.name=yourname  
+user.email=your@email.com  
+color.ui=true  
+color.status=auto  
+color.diff=auto  
+color.branch=auto  
+color.interactive=auto  
+core.editor=mvim  
+core.quotepath=false  
 
 ```
 
 ## 生成SSH Key
-`ssh-keygen -t rsa
-`
+
+    ssh-keygen -t rsa
+
 
 ## 常用的Git
 
@@ -48,7 +50,12 @@ core.quotepath=false
 * git show `hash code`: 查看最后一个commit的代码修改
 * git reflog: 查看最近操作的
 * git stash: 缓存当前编辑
-#### 场景
+* git clean -f: 清除没有跟踪的文件
+
+
+###场景
+
+
 * 修改commit信息
 
 ```
@@ -59,9 +66,9 @@ core.quotepath=false
 * 修改commit错误，又不想要多个commit
 
 ```
-git reset --soft HEAD^
-... do something else to come up with the right tree ...(git add . 或者 git log)
-git commit -c ORIG_HEAD
+	git reset --soft HEAD^
+	... do something else to come up with the right tree ...(git add . 或者 git log)
+	git commit -c ORIG_HEAD
 
 ```
 
