@@ -1,16 +1,18 @@
-# 目的
-[参考材料](http://git-scm.com/book/zh/)<br>
+
 搜集自己工作中常用的git命令
+[参考材料](http://git-scm.com/book/zh/)
 
 ## git的基本配置
 ```
-git config --global user.name "majie"
+git config --global user.name "yourname"
 git config --global user.email "your@email.com"
 
 ```
 <p>
 更多配置信息
 </p>
+
+git config --list
 
 ```
 
@@ -51,28 +53,12 @@ core.quotepath=false
 * git reflog: 查看最近操作的
 * git stash: 缓存当前编辑
 * git clean -f: 清除没有跟踪的文件
-
-
-###场景
-
-
 * 修改commit信息
 
 ```
     git commit --amend -m "New commit message"
     
 ```
-
-* 修改commit错误，又不想要多个commit
-
-```
-	git reset --soft HEAD^
-	... do something else to come up with the right tree ...(git add . 或者 git log)
-	git commit -c ORIG_HEAD
-
-```
-
-
 
 
 
