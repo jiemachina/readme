@@ -47,3 +47,70 @@
 * [Memcache](http://memcached.org/)
 * [MongDB](http://www.mongodb.org/)
 * [Redis](http://www.redis.io/)
+
+
+## 分布式和集群的区别
+
+
+其实去分布式和集群不仅仅是在说计算机方面的领域，因为我们搞IT的，所以往往会把这两个概念放到计算机领域；那他们的区别是什么呢？
+
+* 无论是`分布式`还是`集群`，首先我理解，都是`N个个体在协同工作`，完成一个大任务，并`提升`一个任务的服务质量；
+
+* 分布式就是很多处理`不同类型`任务的集合  
+
+* 集群就是一群有处理`同类`任务的集合
+
+分布式的作用是：把一个处理很困难`大任务`，分成N个`小任务`，让每个个体去完成自己的任务；再把所有的小问题集合在一起；当所有的小任务都处理好了；那么大任务也完成；说白了：`化整为零`
+
+集群的作用是：把一堆（成千上万）类似的任务， 分给N个能够处理这类任务的个体；说白了：`人多力量大`
+
+
+举个例子：就在计算机web服务领域；
+
+
+## Memcache
+
+环境Ubuntu
+
+* 安装Memcache
+	
+		sudo apt-get install memcached
+	
+* 启动服务
+		
+		sudo service memcached start# 其他(restart, stop)
+
+* 客户端连接
+	
+		telnet 127.0.0.1 11211
+		
+	[常用命令参考](http://lzone.de/articles/memcached.htm)
+	
+	[参考二](https://github.com/memcached/memcached/blob/master/doc/protocol.txt)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

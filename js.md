@@ -1,3 +1,9 @@
+[IT学院](http://www.itxueyuan.org/)
+
+[翁天信](http://www.itxueyuan.org/)
+
+[前端观察](http://www.qianduan.net/)
+
 # js的兼容问题
 [参考一](http://www.jb51.net/article/21483.htm)，
 [参考二](http://www.itxueyuan.org/javascript/jianrong/)
