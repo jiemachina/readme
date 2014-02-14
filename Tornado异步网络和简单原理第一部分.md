@@ -11,6 +11,9 @@ Tornado is a Python web framework and `asynchronous` networking library, origina
 在官网中提供的一个Hello world的这个Demo中，是`不支持异步`的，只有在使用`@tornado.web.asynchronous`这个装饰器的时候才能算的上真正异步；参考[博客](http://www.dongwm.com/archives/shi-yong-tornadorang-ni-de-qing-qiu-yi-bu-fei-zu-sai/)
 
 在blog中还有一个装饰`@tornado.gen.coroutine`这个装饰器是干什么的呢?? 查看tornado源码在gen.py中
+
+[文档](http://www.tornadoweb.org/en/stable/gen.html) 
+
 For example, the following asynchronous handler::   
 
                                                                                                             
@@ -70,6 +73,8 @@ For example, the following asynchronous handler::
 
 
 
+
+
 ###一次异步多个请求，适用于Future和Task版， 以下是Future版本###
 
 	@gen.coroutine                                                               
@@ -78,6 +83,13 @@ For example, the following asynchronous handler::
         response1, response2 = yield [http_client.fetch(url1),                   
                                       http_client.fetch(url2)] 
 
+
+### 使用raise 返回内容
+
+	@gen.coroutine
+	def fetch_json(url):
+    	response = yield AsyncHTTPClient().fetch(url)
+    	raise gen.Return(json_decode(response.body))
 
 ## 初看tornado运作
 

@@ -52,7 +52,7 @@
 ## 分布式和集群的区别
 
 
-其实去分布式和集群不仅仅是在说计算机方面的领域，因为我们搞IT的，所以往往会把这两个概念放到计算机领域；那他们的区别是什么呢？
+其实分布式和集群不仅仅是在说计算机方面的领域，因为我们搞IT的，所以往往会把这两个概念放到计算机领域；那他们的区别是什么呢？
 
 * 无论是`分布式`还是`集群`，首先我理解，都是`N个个体在协同工作`，完成一个大任务，并`提升`一个任务的服务质量；
 
@@ -63,9 +63,6 @@
 分布式的作用是：把一个处理很困难`大任务`，分成N个`小任务`，让每个个体去完成自己的任务；再把所有的小问题集合在一起；当所有的小任务都处理好了；那么大任务也完成；说白了：`化整为零`
 
 集群的作用是：把一堆（成千上万）类似的任务， 分给N个能够处理这类任务的个体；说白了：`人多力量大`
-
-
-举个例子：就在计算机web服务领域；
 
 
 ## Memcache
@@ -89,11 +86,38 @@
 	[参考二](https://github.com/memcached/memcached/blob/master/doc/protocol.txt)
 
 
+* 命令参数
+
+		<command name> <key> <flags> <exptime> [noreply]
+		cas <key> <flags> <exptime> <bytes> <cas unique> [noreply]
+	
+* set 操作
+	
+		set abc 1 60 5
+		asdfd
+
+	asdfd第二行是值
+	
+* get 操作
+		
+		get abc
+
+* 退出 quit
 
 
 
+## MongoDB
 
+环境Ubuntu
 
+* 安装MongoDB
+	
+		sudo apt-get update
+		sudo apt-get install mongodb
+		
+* 启动服务
+
+* 启动客户端
 
 
 
